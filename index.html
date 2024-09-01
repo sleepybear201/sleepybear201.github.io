@@ -5,7 +5,111 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
   <style>
-    /* Add your CSS styles here */
+    /* Basic reset for margin and padding */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    /* Body styling */
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      background-color: #f4f4f4;
+      color: #333;
+    }
+
+    /* Header styling */
+    .site-header {
+      background: #333;
+      color: #fff;
+      padding: 15px 0;
+    }
+
+    .site-header .wrapper {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .site-title {
+      font-size: 24px;
+      text-decoration: none;
+      color: #fff;
+    }
+
+    .site-title:hover {
+      text-decoration: underline;
+    }
+
+    /* Navigation styling */
+    .site-nav {
+      position: relative;
+    }
+
+    .nav-trigger {
+      display: none;
+    }
+
+    .menu-icon {
+      display: none;
+      cursor: pointer;
+    }
+
+    .site-nav .trigger {
+      display: flex;
+      gap: 20px;
+    }
+
+    .page-link {
+      text-decoration: none;
+      color: #fff;
+      font-size: 16px;
+      padding: 5px 10px;
+      transition: background 0.3s;
+    }
+
+    .page-link:hover {
+      background: #575757;
+      border-radius: 4px;
+    }
+
+    /* Mobile Menu */
+    @media (max-width: 768px) {
+      .menu-icon {
+        display: block;
+      }
+
+      .site-nav .trigger {
+        display: none;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        background: #333;
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .nav-trigger:checked + label + .trigger {
+        display: flex;
+      }
+
+      .page-link {
+        padding: 15px;
+        font-size: 18px;
+      }
+    }
+
+    /* Footer styling */
+    p {
+      text-align: center;
+      padding: 20px;
+    }
   </style>
 </head>
 <body>
